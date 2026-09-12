@@ -1,0 +1,160 @@
+<meta name="google-site-verification" content="PR1vYF_Y-d6T4qwhD63BkjGGDQyXgI7hjPNSbUQnYP0"/>
+<div class="row g-5 mb-5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 2000px;
+            margin: auto;
+        }
+        .post {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .post-content {
+            max-width: 1800px;
+        }
+        .post-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+        }
+        .post-title:hover {
+            text-decoration: underline;
+        }
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .post-year {
+            font-size: 1.4em;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+        .post-details {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+        }
+        .post-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .post-image {
+            max-width: 50px;
+            margin-top:10px;
+        }
+    </style>
+    <script>
+        function togglePostDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Post 1 -->
+    <div class="post">
+        <div class="post-content">
+            <a href="javascript:void(0)" class="post-title" onclick="togglePostDetails('post1')">
+                Let's play with IoT Sesnors Based Smart Home! Generate Digital Twin for HVAC Control
+            </a>
+            <p class="post-meta">Md Babul Islam · Aug 15, 2021 · 9 min read</p>
+            <div id="post1" class="post-details">
+                <p>This post shows how to build an unsupervised deep learning model for generating  by leveraging a Various Deep learning models and training on the smart home, room, and lab dataset of HVVC using Keras+Tensorflow.</p>
+    <p>
+        In this project, we aim to build a smart HVAC control system using data collected from various IoT sensors installed in a smart home environment. The core idea is to develop a <strong>digital twin</strong> of the HVAC system, which allows us to simulate, monitor, and control the HVAC performance in real-time by leveraging sensor data. This digital twin approach enhances the capability of predicting temperature, humidity, and air quality in the home, enabling efficient and intelligent HVAC control.
+    </p>
+
+    <h5>Data Collection and IoT Sensor Integration</h5>
+    <p>
+        To create a functional digital twin, we first collected real-world data from multiple IoT sensors. These sensors are capable of measuring parameters like <strong>temperature, humidity, carbon dioxide (CO₂) levels,</strong> and <strong>energy consumption</strong>. By installing these sensors at strategic locations within the home, we captured accurate environmental readings over a period. This dataset serves as the foundation for our predictive models, as it reflects the actual HVAC system's interactions with its environment.
+    </p>
+
+    <h5>Building Predictive Models with LSTM and BiLSTM</h5>
+    <p>
+        Once we gathered sufficient data, we employed <strong>Long Short-Term Memory (LSTM)</strong> and <strong>Bidirectional LSTM (BiLSTM)</strong> models to forecast environmental conditions based on historical data. These models are particularly effective for time-series prediction because they can capture dependencies across time, making them suitable for HVAC control where past patterns influence future states.
+    </p>
+
+    <p>
+        The <strong>LSTM model</strong> processes data sequentially and is adept at learning patterns in temperature, humidity, and air quality changes over time. On the other hand, the <strong>BiLSTM model</strong> enhances this by analyzing the data in both forward and backward directions, allowing it to learn from past and future trends simultaneously. This bidirectional approach can yield more accurate predictions, making it particularly useful for systems where environmental conditions fluctuate frequently.
+    </p>
+
+    <h5>Training and Evaluating the Models</h5>
+    <p>
+        After defining our LSTM and BiLSTM architectures, we trained the models using the collected sensor data. The training process involved splitting the data into training and validation sets to fine-tune model parameters, ensuring generalizability and avoiding overfitting. Key metrics like <strong>Mean Squared Error (MSE)</strong> and <strong>Root Mean Squared Error (RMSE)</strong> were used to evaluate model performance, helping us assess the models' accuracy in predicting environmental changes.
+    </p>
+
+    <h5>Implementation in the Digital Twin</h5>
+    <p>
+        With trained models in place, we integrated them into the digital twin of the HVAC system. The digital twin continuously receives real-time sensor data, making predictions and adjusting the HVAC settings accordingly. For example, if the BiLSTM model predicts an increase in CO₂ levels or a rise in temperature, the HVAC system adjusts its operations to maintain optimal indoor conditions. This dynamic control strategy not only improves comfort but also reduces energy consumption by minimizing unnecessary HVAC usage.
+    </p>
+
+    <h5>Conclusion</h5>
+    <p>
+        This project demonstrates the potential of combining IoT, digital twin technology, and deep learning models to create an intelligent HVAC control system. By leveraging real-time sensor data and predictive models like LSTM and BiLSTM, we built a robust and responsive system capable of adapting to environmental changes. This approach paves the way for more energy-efficient and sustainable smart home solutions, enabling users to experience improved comfort with minimal environmental impact.
+    </p>
+                
+            </div>
+        </div>
+        <div class="post-sidebar">
+            <div class="post-year">2021</div>
+            <img src="{{ site.github.url }}/PhD Dataset/Omnia Dataset.png" alt="HVAC Smart Building" class="post-image">
+        </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post">
+        <div class="post-content">
+            <a href="javascript:void(0)" class="post-title" onclick="togglePostDetails('post2')">
+                Understanding Transformers for Time Series Analysis
+            </a>
+            <p class="post-meta">Md Babul Islam · Feb 10, 2022 · 12 min read</p>
+            <div id="post2" class="post-details">
+                <p>This article explores how Transformers can be applied to time series analysis, discussing their architecture, advantages, and practical applications in forecasting tasks.</p>
+            </div>
+        </div>
+        <div class="post-sidebar">
+            <div class="post-year">2022</div>
+            <img src="{{ site.github.url }}/assets/img/Transformers.jpg" alt="Transformers Example" class="post-image">
+        </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="post">
+        <div class="post-content">
+            <a href="javascript:void(0)" class="post-title" onclick="togglePostDetails('post3')">
+                A Beginner's Guide to Continual Learning in Deep Learning
+            </a>
+            <p class="post-meta">Md Babul Islam · Jun 5, 2023 · 15 min read</p>
+            <div id="post3" class="post-details">
+                <p>Learn the basics of Continual Learning in deep learning, its challenges, and its potential for building adaptive, long-term learning systems in artificial intelligence.</p>
+            </div>
+        </div>
+        <div class="post-sidebar">
+            <div class="post-year">2023</div>
+            <img src="{{ site.github.url }}/assets/img/Continual_Learning.jpg" alt="Continual Learning Example" class="post-image">
+        </div>
+    </div>
+
+<!-- 
+
+    
+      
+      
+    </div>
+  </div> -->
+</div>
